@@ -3,5 +3,5 @@ site_url: https://example.com/  # Change this to the real value before deploy to
 nav: 
     - Home: index.md
     - About: about.md
-    - Git: git-collection.md
+    - Git: git/git-collection.md
 theme: readthedocs
