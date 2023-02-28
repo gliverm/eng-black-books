@@ -1,0 +1,7 @@
+site_name: "Engineering Black Book"
+site_url: https://example.com/  # Change this to the real value before deploy to prod server
+nav: 
+    - Home: index.md
+    - About: about.md
+    - Git: git-collection.md
+theme: readthedocs

@@ -15,7 +15,10 @@ Intended to be engineering black books migrating from MacOS notes.  Trying out m
 
         pipenv shell
 
-## Code Style Enviornment
+## MkDocs Preview environment
+
+
+## Code Style Environment
 
 
 ## Pre-commit
