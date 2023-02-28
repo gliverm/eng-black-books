@@ -25,6 +25,7 @@ A great recipe for Git branching model here: https://nvie.com/posts/a-successful
 ## Failing to delete remote branch
 
 ![Screenshot](Internal-Server-Error.png)
+
 * Not sure how I got into the state shown above.  I could not delete the branch directly on GitHub GUI either
 * Explanation of fetch -p option is that it tells fetch to delete any tracking branches that no longer exist in the corresponding remotes; by default they are kept around
 * Option 1 to delete remote branch: get push origin —delete `<branchname>`
