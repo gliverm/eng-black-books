@@ -1,6 +1,8 @@
 # eng-black-books
 
-Intended to be engineering black books migrating from MacOS notes for my future self.  Stuff I write could be wrong. 
+Intended to be engineering black books migrating from MacOS notes for my future self.  Working with material design theme.
+
+Stuff I write could be wrong - be curious not judgemental. 
 
 Trying out mkdocs as a solution.
 
@@ -19,6 +21,11 @@ Trying out mkdocs as a solution.
    pipenv shell
 
 ## MkDocs Preview environment
+
+To start the MkDocs preview environment perform the following:
+
+*  cd my-project/docs
+*  mkdocs serve
 
 ## Code Style Environment
 

@@ -2,6 +2,11 @@ site_name: "Engineering Black Book"
 site_url: https://example.com/  # Change this to the real value before deploy to prod server
 nav: 
     - Home: index.md
-    - About: about.md
     - Git: git/git-collection.md
-theme: readthedocs
+#theme: readthedocs
+theme: 
+    name: material
+    palette: 
+        scheme: default
+    features:
+        - navigation.instant

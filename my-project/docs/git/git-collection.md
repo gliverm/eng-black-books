@@ -1,8 +1,46 @@
+| [Home](index.md) ▸ **Git** |
+|-----|
+
 # Git
 
-A collection of helpful Git information for my future self
+A collection of helpful Git information for my future self.  For most information here is basic adding as my experience grows.  This is a mess and I need to reorg.
 
-## Basic
+## Table of Contents <!-- omit in toc -->
+
+- [Git](#git)
+  - [Basics](#basics)
+  - [Git Config](#git-config)
+  - [Create New Repo](#create-new-repo)
+    - [From Empty Directory](#from-empty-directory)
+    - [From a Populated Directory](#from-a-populated-directory)
+  - [Git Strategy Notes](#git-strategy-notes)
+  - [Failing to delete remote branch](#failing-to-delete-remote-branch)
+  - [Dealing with Branches](#dealing-with-branches)
+  - [To add untracked files](#to-add-untracked-files)
+  - [External cheat sheets](#external-cheat-sheets)
+  - [Tagging](#tagging)
+    - [Tagging past commit points](#tagging-past-commit-points)
+  - [Merging a feature branch into main](#merging-a-feature-branch-into-main)
+    - [Dealing with Merge Issues](#dealing-with-merge-issues)
+  - [Undoing Stuff](#undoing-stuff)
+    - [To revert the last commit when it has already been pushed up](#to-revert-the-last-commit-when-it-has-already-been-pushed-up)
+  - [Renaming a branch](#renaming-a-branch)
+  - [Versioning](#versioning)
+  - [Commits](#commits)
+  - [Set git Configuration](#set-git-configuration)
+  - [Renaming a Repository](#renaming-a-repository)
+  - [Misc Tips and Tricks](#misc-tips-and-tricks)
+  - [Checking out a Repo Branch tracked on remote (like your buddy’s branch)](#checking-out-a-repo-branch-tracked-on-remote-like-your-buddys-branch)
+  - [Personal Access Token](#personal-access-token)
+  - [Personal Access Token per repo (to operate using VSCode with a container)](#personal-access-token-per-repo-to-operate-using-vscode-with-a-container)
+  - [Squash](#squash)
+    - [Squash Commits for a Feature into Main/main](#squash-commits-for-a-feature-into-mainmain)
+    - [Squash Commits on a branch](#squash-commits-on-a-branch)
+  - [Create New Repo from Populated Directory](#create-new-repo-from-populated-directory)
+  - [Changing to a new branch name when branch has been pushed to remote](#changing-to-a-new-branch-name-when-branch-has-been-pushed-to-remote)
+
+
+## Basics
 
 * To see current tracked and untracked files: `git status`
 * Add all files to the index: `git add —all`
@@ -17,6 +55,37 @@ A collection of helpful Git information for my future self
 * To delete remote branch: `git push —delete <remotename> <branchname>`
 * To push local branch to remote: `git push -u origin <branchname>`
 * List all branches(local and remote): `git branch -a`
+
+## Git Config
+
+* List git config : `git  config --list`
+* Changing git config
+  * If using GitHub desktop some values may be filled in
+  * Can set git config to be global but may also find it beneficial to modify values to be repo specific.  Repo specific values override global values.
+  * To set values globally use the --global flag
+  * Set global username: `git config --global user.name "FIRST_NAME LAST_NAME"`
+  * Set global email: `git config --global user.email "MY_NAME@example.com"`
+  * Set local repo email: git config user.name "MY_NAME@example.com"
+  * 
+
+## Create New Repo
+
+  ### From Empty Directory
+  * Create directory to contain the project
+  * `cd` into the root project directory
+  * `git init`
+  * Perform code dev with git commits.
+
+  ### From a Populated Directory
+
+  * `cd' into root of the populated prject directory to initialize as repo 
+  * If the directory is a cloned repo you will need to change the origin:  ‘git remote set-url origin `<url>`”
+  * If you the directory is an un initialized repo: `git init`
+  * Add files to commit: `git add .`
+  * Commit: `git commit -m “my first commit”`
+  * If this is a newly initialized repo you will need to set the origin: ‘get remote add origin `<url>`”
+  * Change the main branch to the new default: `git branch -M main`
+  * Push the repo to remote repository: `git push -u origin main`
 
 ## Git Strategy Notes
 
@@ -83,7 +152,7 @@ Depending on needs tagging can be used to take a snapshot at a milestone(release
 
 ## Merging a feature branch into main
 
-The git strategy should be agreed upon by all.  Recent experience is to mange the merges via pull requests and protect the main branch.  
+The git strategy should be agreed upon by all.  Recent experience is to mange the merges via pull requests and protect the main branch.
 
 * Move to main branch: git checkout main
 * Pull in latest from main: git pull
@@ -190,17 +259,7 @@ I may be more of a fan if versioning is required to version basd on the year and
 * Another option to list branches on the remote: git branch —remotes
 * Can check out branch prefacing the remote name: git checkout -t origin/branchname
 
-## Create a new repo and link it to GitHub.com account
 
-* This section describes how to push up work from say a lab machine to save it somewhere before that work is blown away
-* Cd to the root of the directory you would like to turn into a repo
-* If the directory is a cloned repo you will need to change the origin:  ‘git remote set-url origin `<url>`”
-* If you the directory is an un initialized repo: git init
-* Add files to commit: git add .
-* Commit: git commit -m “my first commit”
-* If this is a newly initialized repo you will need to set the origin: ‘get remote add origin `<url>`”
-* Change the main branch to the new default: git branch -M main
-* Push the repo to GitHub: git push -u origin main
 
 ## Personal Access Token
 
@@ -214,9 +273,9 @@ I may be more of a fan if versioning is required to version basd on the year and
 ## Personal Access Token per repo (to operate using VSCode with a container)
 
 * Create a personal access token(PAT) by going into github.com, settings->Developer Settings->Personal access tokens
-* At repo root directory set remote url with format:  git remote set-url https://username:token@github.com/<org>/repository.git
+* At repo root directory set remote url with format:  git remote set-url https://username:token@github.com/`<org>`/repository.git
 
-## Squash 
+## Squash
 
 ### Squash Commits for a Feature into Main/main
 
