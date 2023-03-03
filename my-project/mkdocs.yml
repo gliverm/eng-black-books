@@ -3,6 +3,7 @@ site_url: https://example.com/  # Change this to the real value before deploy to
 nav: 
     - Home: index.md
     - Git: git/git-collection.md
+    - MacOs: macos-colection.md
 #theme: readthedocs
 theme: 
     name: material
