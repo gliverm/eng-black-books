@@ -3,7 +3,7 @@
 
 # Git
 
-A collection of helpful Git information for my future self.  For most information here is basic adding as my experience grows.  This is a mess and I need to reorg.
+A collection of helpful Git information for my future self.  For most information here is basic adding as my experience grows.  This is a mess and I need to reorg. change here
 
 ## Table of Contents <!-- omit in toc -->
 
